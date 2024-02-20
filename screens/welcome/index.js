@@ -1,22 +1,16 @@
-import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import { TextInput } from "react-native";
 import React from "react";
-import { View, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
+import { View, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
 const WelcomeScreen = () => {
-  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
 
         <TextInput style={styles.CnoMgRbV} placeholder="Enter Word"></TextInput>
-        <Pressable onPress={() => {
-        navigation.navigate("about");
-      }}>
-          <Text style={styles.YcQdVccC}>Lorem ipsum…</Text>
-        </Pressable>
-      </ScrollView>
+        
+      <Pressable><View style={styles.hLYPgMKS}></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -48,15 +42,15 @@ const styles = StyleSheet.create({
     left: 0,
     top: 0
   },
-  YcQdVccC: {
-    width: 274,
-    height: 50,
-    lineHeight: 14,
-    fontSize: 14,
-    borderRadius: 0,
+  hLYPgMKS: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#E4E4E4",
+    borderRadius: 40,
+    color: "#777777",
     position: "absolute",
-    top: 0,
-    left: 32
+    top: -30,
+    borderWidth: 6
   }
 });
 export default WelcomeScreen;
