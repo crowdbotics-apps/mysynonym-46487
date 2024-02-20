@@ -1,7 +1,8 @@
+import { Pressable } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
-const AboutTheAppScreen = params => {
+const AboutTheAppScreen = () => {
   const [ImageSource, setImageSource] = useState();
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
@@ -13,13 +14,13 @@ const AboutTheAppScreen = params => {
   return <SafeAreaView style={styles.container}>
       <View style={styles.imgScroller}>
         <Image source={ImageSource} />
-        <Image style={styles.threeDots} source={require("./assets/3Dots.png")} />
+        
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{text1}</Text>
-        <Text style={styles.text}>{text2}</Text>
+        
       </View>
-    </SafeAreaView>;
+    <Pressable><Text style={styles.ZYlehMEh}>{"Back"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -34,9 +35,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 20
   },
-  threeDots: {
-    marginTop: 20
-  },
   textContainer: {
     paddingHorizontal: 20
   },
@@ -45,6 +43,15 @@ const styles = StyleSheet.create({
     textAlign: "justify",
     lineHeight: 18,
     marginVertical: 10
+  },
+  ZYlehMEh: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    position: "absolute",
+    top: 0
   }
 });
 export default AboutTheAppScreen;
