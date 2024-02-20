@@ -1,15 +1,19 @@
+import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import { TextInput } from "react-native";
 import React from "react";
 import { View, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
 const WelcomeScreen = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         
         
-      <TextInput style={styles.CnoMgRbV}></TextInput><Pressable><Text style={styles.YcQdVccC}>Lorem ipsum…</Text></Pressable></ScrollView>
+      <TextInput style={styles.CnoMgRbV}></TextInput><Pressable onPress={() => {
+        navigation.navigate("");
+      }}><Text style={styles.YcQdVccC}>Lorem ipsum…</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
