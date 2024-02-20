@@ -11,7 +11,7 @@ const WelcomeScreen = () => {
         <View style={styles.group} />
         
         
-      <TextInput style={styles.CnoMgRbV}></TextInput><Pressable onPress={() => {
+      <TextInput style={styles.CnoMgRbV} placeholder="Enter Word"></TextInput><Pressable onPress={() => {
         navigation.navigate("");
       }}><Text style={styles.YcQdVccC}>Lorem ipsum…</Text></Pressable></ScrollView>
     </SafeAreaView>;
