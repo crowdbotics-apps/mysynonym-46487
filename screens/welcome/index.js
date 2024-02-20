@@ -1,29 +1,17 @@
-import React from "react"
-import {
-  View,
-  Image,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet
-} from "react-native"
+import { Pressable } from "react-native";
+import { TextInput } from "react-native";
+import React from "react";
+import { View, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
 const WelcomeScreen = () => {
-  return (
-    <SafeAreaView style={styles.container}>
+  return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
-        <View style={styles.group}>
-          <Image style={styles.logo} source={require("./logo.png")} />
-          <Text style={styles.text}>
-            Let's build something amazing together!
-          </Text>
-        </View>
-        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
-      </ScrollView>
-    </SafeAreaView>
-  )
-}
+        
+        
+      <TextInput style={styles.CnoMgRbV}></TextInput><Pressable><Text style={styles.YcQdVccC}>Lorem ipsum…</Text></Pressable></ScrollView>
+    </SafeAreaView>;
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -37,28 +25,31 @@ const styles = StyleSheet.create({
     padding: 20
   },
   group: {
-    alignItems: "center"
+    alignItems: "center",
+    width: 282,
+    height: 490,
+    position: "absolute",
+    left: 33,
+    top: 84
   },
-  logo: {
-    height: 180,
-    width: 180,
-    padding: 40,
-    borderRadius: 30,
-    margin: 40
+  CnoMgRbV: {
+    backgroundColor: "#ffffff",
+    borderColor: "#cccccc",
+    width: 252,
+    height: 30,
+    position: "relative",
+    left: 0,
+    top: 0
   },
-  text: {
-    textAlign: "center",
-    fontSize: 28,
-    color: "#828AB0",
-    fontWeight: 700
-  },
-  footer: {
-    textAlign: "center",
-    fontSize: 18,
-    color: "#828AB0",
-    fontWeight: 700,
-    marginBottom: 20
+  YcQdVccC: {
+    width: 274,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0,
+    position: "absolute",
+    top: 584,
+    left: 32
   }
-})
-
-export default WelcomeScreen
+});
+export default WelcomeScreen;
