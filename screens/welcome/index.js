@@ -9,11 +9,14 @@ const WelcomeScreen = () => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
-        
-        
-      <TextInput style={styles.CnoMgRbV} placeholder="Enter Word"></TextInput><Pressable onPress={() => {
-        navigation.navigate("");
-      }}><Text style={styles.YcQdVccC}>Lorem ipsum…</Text></Pressable></ScrollView>
+
+        <TextInput style={styles.CnoMgRbV} placeholder="Enter Word"></TextInput>
+        <Pressable onPress={() => {
+        navigation.navigate("about");
+      }}>
+          <Text style={styles.YcQdVccC}>Lorem ipsum…</Text>
+        </Pressable>
+      </ScrollView>
     </SafeAreaView>;
 };
 
