@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     borderRadius: 0,
     position: "absolute",
-    top: 584,
+    top: 0,
     left: 32
   }
 });
