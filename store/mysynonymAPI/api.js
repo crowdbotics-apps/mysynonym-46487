@@ -1,96 +1,70 @@
-import axios from "axios";
+import axios from "axios"
 const mysynonymAPI = axios.create({
   baseURL: "https://mysynonym-46487.botics.co",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json"
-  }
-});
-
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 function api_docs_schema_retrieve(payload) {
   return mysynonymAPI.get(`/api-docs/schema/`, {
-    params: {
-      lang: payload.lang
-    }
-  });
+    params: { lang: payload.lang }
+  })
 }
-
 function api_v1_login_create(payload) {
-  return mysynonymAPI.post(`/api/v1/login/`, payload);
+  return mysynonymAPI.post(`/api/v1/login/`, payload)
 }
-
 function api_v1_signup_create(payload) {
-  return mysynonymAPI.post(`/api/v1/signup/`, payload);
+  return mysynonymAPI.post(`/api/v1/signup/`, payload)
 }
-
 function api_v1_test_list(payload) {
-  return mysynonymAPI.get(`/api/v1/test/`);
+  return mysynonymAPI.get(`/api/v1/test/`)
 }
-
 function api_v1_test_create(payload) {
-  return mysynonymAPI.post(`/api/v1/test/`, payload);
+  return mysynonymAPI.post(`/api/v1/test/`, payload)
 }
-
 function api_v1_test_retrieve(payload) {
-  return mysynonymAPI.get(`/api/v1/test/${payload.id}/`);
+  return mysynonymAPI.get(`/api/v1/test/${payload.id}/`)
 }
-
 function api_v1_test_update(payload) {
-  return mysynonymAPI.put(`/api/v1/test/${payload.id}/`, payload);
+  return mysynonymAPI.put(`/api/v1/test/${payload.id}/`, payload)
 }
-
 function api_v1_test_partial_update(payload) {
-  return mysynonymAPI.patch(`/api/v1/test/${payload.id}/`, payload);
+  return mysynonymAPI.patch(`/api/v1/test/${payload.id}/`, payload)
 }
-
 function api_v1_test_destroy(payload) {
-  return mysynonymAPI.delete(`/api/v1/test/${payload.id}/`);
+  return mysynonymAPI.delete(`/api/v1/test/${payload.id}/`)
 }
-
 function rest_auth_login_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/login/`, payload);
+  return mysynonymAPI.post(`/rest-auth/login/`, payload)
 }
-
 function rest_auth_logout_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/logout/`);
+  return mysynonymAPI.post(`/rest-auth/logout/`)
 }
-
 function rest_auth_password_change_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/password/change/`, payload);
+  return mysynonymAPI.post(`/rest-auth/password/change/`, payload)
 }
-
 function rest_auth_password_reset_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/password/reset/`, payload);
+  return mysynonymAPI.post(`/rest-auth/password/reset/`, payload)
 }
-
 function rest_auth_password_reset_confirm_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/password/reset/confirm/`, payload);
+  return mysynonymAPI.post(`/rest-auth/password/reset/confirm/`, payload)
 }
-
 function rest_auth_registration_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/registration/`, payload);
+  return mysynonymAPI.post(`/rest-auth/registration/`, payload)
 }
-
 function rest_auth_registration_resend_email_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/registration/resend-email/`, payload);
+  return mysynonymAPI.post(`/rest-auth/registration/resend-email/`, payload)
 }
-
 function rest_auth_registration_verify_email_create(payload) {
-  return mysynonymAPI.post(`/rest-auth/registration/verify-email/`, payload);
+  return mysynonymAPI.post(`/rest-auth/registration/verify-email/`, payload)
 }
-
 function rest_auth_user_retrieve(payload) {
-  return mysynonymAPI.get(`/rest-auth/user/`);
+  return mysynonymAPI.get(`/rest-auth/user/`)
 }
-
 function rest_auth_user_update(payload) {
-  return mysynonymAPI.put(`/rest-auth/user/`, payload);
+  return mysynonymAPI.put(`/rest-auth/user/`, payload)
 }
-
 function rest_auth_user_partial_update(payload) {
-  return mysynonymAPI.patch(`/rest-auth/user/`, payload);
+  return mysynonymAPI.patch(`/rest-auth/user/`, payload)
 }
-
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
@@ -112,4 +86,4 @@ export const apiService = {
   rest_auth_user_retrieve,
   rest_auth_user_update,
   rest_auth_user_partial_update
-};
+}
